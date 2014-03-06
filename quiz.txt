@@ -12,21 +12,36 @@ and "" would be "a blank string"
 
 1a) :crocodile
 
+symbol
+
 1b) "145.73"
+
+string
 
 1c) { :coffee => "cafe" }
 
+hash
+
 1d) [ :green, :eggs, :ham ]
 
+an array containing three symbols
+
 1e) ["tea", {"juice" => "orange"}]
+
+an array containing two elements, the string tea and a hash with key juice and value orange
 
 2) Here is an array:
 array = ["Molly", "Greg", "Taz"]
 Write a line of ruby that appends the values "Jay" and "Mona" to the array.
 
+array.push("Jay", "Mona")
+
 3) Here is a hash:
 hash = { :cow => "Moo", :sheep => "Baah" }
+
 Write a line of ruby that replaces the value of the key :sheep with "Bleat".
+
+hash[:sheep] = 'bleat'
 
 4) The file number_converter.rb contains a method called convert_number that doesn't do anything.
 
@@ -34,7 +49,19 @@ Replace the #??? comment inside it so that:
   if the argument passed is greater than 5, it returns 3 times the number,
   and if it is less than or equal to 5 it returns the number minus 3.
 
+def convert_number(number)
+  puts number > 5 ? number * 3 : number - 3
+end
+
 5) Write a method that takes one argument (an array full of strings) and `puts` each word separately, but in uppercase.
+
+def seperate(array)
+  array.each { |n|
+  puts n.upcase
+  }
+end
+
+  
 
 6) What's the difference between an object and an instance?
 
@@ -52,29 +79,55 @@ HTML, CSS and Javascript
 ------------------------
 
 8) In a sentance, describe:
+
 a) what is HTML?
+
+is the text and structure of the webpage
+
 b) what is CSS?
+
+is the styling
+
 c) what is Javascript?
+
+is for interactive stuff 
 
 9) State if the following lines are HTML, CSS,or Javascript:
 
 a) <p>Lorem Ipsum</p>
 
+html
+
 b) console.log("Some words");
+
+javascript
 
 c) p { background-color: yellow }
 
+css
+
 d) <table width="50%"></table>
 
+html
+
 e) <div id="index" class="small left"></div>
+
+html
 
 10) Describe the following Javascript objects, like you did for the first question:
 
 10a) 100.26
 
+integer
+
 10b) "Hello"
+
+string
 
 10c) [ "a", 4, null ]
 
+array containing 3 elements, a string, an integer and an undefined
+
 10d) { height: "180cm" }
 
+hash
